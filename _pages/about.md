@@ -13,7 +13,7 @@ My work is at the intersection of Economics and Psychology. I use neoclassical t
 
 Sometimes people ask how to pronounce my first name, so here is an attempt at phonetics: Subhasish, is pronounced as "shoe-va-sish."
 
-
+I acknowledge that I live and work on the ancestral & traditional lands of the Goshute, Paiute, Shoshone, and Ute peoples.
 
 Getting started
 ======
