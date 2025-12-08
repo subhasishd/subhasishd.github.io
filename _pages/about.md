@@ -1,3 +1,11 @@
+---
+permalink: /
+title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+author_profile: true
+redirect_from: 
+  - /about/
+  - /about.html
+---
 
 My name is Subhasish Dugar, and I am a Professor in the Economics department at the University of Utah. Previously, I was as an assistant and associate professor (with tenure) in the Department of Economics at the University of Calgary, Canada. Prior to that, I completed my Ph.D. in Economics from the University of Arizona. 
 
