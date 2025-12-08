@@ -1,5 +1,5 @@
 ---
-title: "Paper Title Number 1"
+title: "Bargaining over Taking from a Powerless Third Party: The Role of Social Preferences (with Haimanti Bhattacharya and Sumit Sarkar), Journal of Behavioral and Experimental Economics, 2025, conditionally accepted."
 collection: publications
 category: manuscripts
 permalink: /publication/2009-10-01-paper-title-number-1
