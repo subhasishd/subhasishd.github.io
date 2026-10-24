@@ -3,234 +3,181 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Subhasish Dugar | Economics, University of Utah</title>
-<meta name="description" content="Subhasish Dugar, Professor of Economics at the University of Utah. Behavioral and experimental economics, field experiments, applied game theory.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<title>Subhasish Dugar</title>
+<meta name="description" content="Subhasish Dugar, Professor of Economics, University of Utah.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <style>
-:root {
-  --bg: #ffffff;
-  --side: #f3f5f8;
-  --ink: #1d2533;
-  --muted: #5a6474;
-  --accent: #1f4e79;
-  --rule: #dce1e8;
-  color-scheme: light;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #161b22;
-    --side: #1d232c;
-    --ink: #e4e8ee;
-    --muted: #9aa4b2;
-    --accent: #8db8e8;
-    --rule: #2d3540;
-    color-scheme: dark;
-  }
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--ink);
-  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
-  font-size: 1.0625rem;
-  line-height: 1.6;
-}
-a { color: var(--accent); text-underline-offset: 2px; }
-a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+:root{--text:#494e52;--muted:#7a8288;--link:#2f7f9e;--rule:#f2f3f3;--border:#bdc1c4;--footer:#f2f3f3;}
+*{box-sizing:border-box}
+html{font-size:16px}
+body{margin:0;color:var(--text);background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;line-height:1.6;display:flex;flex-direction:column;min-height:100vh}
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible{outline:2px solid var(--link);outline-offset:2px}
 
-.layout { display: grid; grid-template-columns: 300px 1fr; min-height: 100vh; }
+/* top bar */
+.masthead{border-bottom:1px solid var(--rule);background:#fff}
+.masthead nav{max-width:1280px;margin:0 auto;padding:.9em 1.5em;display:flex;gap:1.6em;flex-wrap:wrap}
+.masthead a{color:var(--muted);font-size:1.05em;padding-bottom:.2em;border-bottom:3px solid transparent}
+.masthead a:hover{color:var(--text);text-decoration:none}
+.masthead a.active{color:var(--text);border-bottom-color:var(--link)}
+.masthead a.home{color:var(--text);font-weight:600}
 
-aside {
-  background: var(--side);
-  border-right: 1px solid var(--rule);
-  padding: 3rem 2rem;
-}
-.side-inner { position: sticky; top: 3rem; }
-.photo {
-  width: 180px; height: 220px;
-  object-fit: cover;
-  border-radius: 4px;
-  display: block;
-  background: var(--rule);
-}
-h1 { font-size: 1.75rem; font-weight: 600; line-height: 1.2; margin: 1.5rem 0 0.25rem; }
-.role { margin: 0; color: var(--muted); }
-.contact { margin: 1.25rem 0 0; font-size: 0.95rem; color: var(--muted); }
-.contact a { word-break: break-all; }
-nav { margin-top: 2rem; display: flex; flex-direction: column; gap: 0.35rem; }
-nav a { text-decoration: none; color: var(--ink); }
-nav a:hover { color: var(--accent); }
+/* layout */
+.wrap{max-width:1280px;margin:0 auto;padding:2em 1.5em 3em;display:grid;grid-template-columns:220px 1fr;gap:3em;flex:1;width:100%}
+.sidebar{font-size:.9em}
+.sidebar .inner{position:sticky;top:2em}
+.avatar{width:175px;height:175px;border-radius:50%;object-fit:cover;padding:5px;border:1px solid var(--border);display:block}
+.sidebar h3{margin:.8em 0 .1em;font-size:1.25em;color:var(--text)}
+.sidebar .bio{margin:0 0 .8em;color:var(--muted)}
+.sidebar ul{list-style:none;padding:0;margin:0}
+.sidebar li{display:flex;gap:.6em;margin:.45em 0;align-items:flex-start}
+.sidebar li i{width:1.1em;text-align:center;margin-top:.25em;color:var(--muted)}
+.sidebar li a{color:var(--text)}
+.sidebar li a:hover{color:var(--link)}
 
-main { padding: 3rem 3.5rem 4rem; max-width: 52rem; }
-section { margin-bottom: 3rem; }
-h2 {
-  font-size: 1.4rem; font-weight: 600;
-  margin: 0 0 1rem;
-  padding-bottom: 0.4rem;
-  border-bottom: 2px solid var(--accent);
-}
-h3 { font-size: 1.1rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--muted); }
-.lede { margin: 0 0 1rem; }
+/* content */
+main{min-width:0;max-width:52em}
+main h1{font-size:2em;margin:0 0 .6em;line-height:1.2;color:#313639}
+main h2{font-size:1.4em;margin:1.8em 0 .8em;padding-bottom:.4em;border-bottom:1px solid var(--rule);color:#313639}
+main h3{font-size:1.1em;margin:1.4em 0 .6em;color:#313639}
+main p{margin:0 0 1em}
+.page{display:none}
+.page.show{display:block}
+.paper{margin:0 0 1.3em}
+.paper .t{font-weight:600;color:#313639}
+.paper .a,.paper .j{display:block}
+.paper .j{font-size:.95em}
+.paper .j em{font-style:italic}
+main ul.list{padding-left:1.2em}
+main ul.list li{margin:.3em 0}
 
-ol.papers { list-style: none; padding: 0; margin: 0; }
-ol.papers li { margin-bottom: 1.1rem; }
-.title { font-weight: 600; }
-.meta { display: block; color: var(--muted); font-size: 0.97rem; }
-.journal { font-style: italic; }
+footer{background:var(--footer);color:var(--muted);font-size:.8em;margin-top:2em}
+footer div{max-width:1280px;margin:0 auto;padding:1.5em}
 
-ul.courses { padding-left: 1.2rem; margin: 0; }
-ul.courses li { margin-bottom: 0.3rem; }
-
-footer { color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--rule); padding-top: 1rem; }
-
-@media (max-width: 820px) {
-  .layout { grid-template-columns: 1fr; }
-  aside { border-right: none; border-bottom: 1px solid var(--rule); padding: 2rem 1.5rem; }
-  .side-inner { position: static; }
-  nav { flex-direction: row; flex-wrap: wrap; gap: 1rem; }
-  main { padding: 2rem 1.5rem 3rem; }
+@media (max-width:860px){
+  .wrap{grid-template-columns:1fr;gap:1.5em;padding-top:1.5em}
+  .sidebar .inner{position:static;display:grid;grid-template-columns:110px 1fr;gap:0 1.2em;align-items:start}
+  .avatar{width:110px;height:110px}
+  .sidebar h3{margin-top:0}
+  .sidebar .who{grid-column:2}
+  .sidebar ul{grid-column:1/-1;margin-top:.8em}
 }
 </style>
 </head>
 <body>
-<div class="layout">
 
-<aside>
-  <div class="side-inner">
-    <img class="photo" src="photo.jpg" alt="Photo of Subhasish Dugar">
-    <h1>Subhasish Dugar</h1>
-    <p class="role">Professor of Economics<br>University of Utah</p>
-    <p class="contact">
-      260 South Central Campus Drive<br>
-      GC Suite 4039<br>
-      Salt Lake City, UT 84112<br><br>
-      <a href="mailto:subhasish.dugar@economics.utah.edu">subhasish.dugar@economics.utah.edu</a><br>
-      <a href="Dugar_cv.pdf">Curriculum vitae (PDF)</a>
-    </p>
-    <nav aria-label="Sections">
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#teaching">Teaching</a>
-    </nav>
-  </div>
-</aside>
+<header class="masthead">
+  <nav aria-label="Main">
+    <a href="#home" class="home" data-page="home">Home</a>
+    <a href="#research" data-page="research">Research</a>
+    <a href="#teaching" data-page="teaching">Teaching</a>
+    <a href="Dugar_cv.pdf" target="_blank" rel="noopener">CV</a>
+  </nav>
+</header>
 
-<main>
+<div class="wrap">
+  <aside class="sidebar">
+    <div class="inner">
+      <img class="avatar" src="photo.jpg" alt="Subhasish Dugar">
+      <div class="who">
+        <h3>Subhasish Dugar</h3>
+        <p class="bio">Professor of Economics</p>
+      </div>
+      <ul>
+        <li><i class="fa-solid fa-location-dot"></i><span>260 S Central Campus Dr, GC Suite 4039<br>Salt Lake City, Utah 84112</span></li>
+        <li><i class="fa-solid fa-building-columns"></i><span>University of Utah</span></li>
+        <li><i class="fa-solid fa-envelope"></i><a href="mailto:subhasish.dugar@economics.utah.edu">Email</a></li>
+        <li><i class="fa-solid fa-file-lines"></i><a href="Dugar_cv.pdf" target="_blank" rel="noopener">CV</a></li>
+      </ul>
+    </div>
+  </aside>
 
-<section id="about">
-  <h2>About</h2>
-  <p class="lede">I am a Professor of Economics at the University of Utah and an affiliated faculty member of the University's Asia Center. I study how people behave in markets, contests, and bargaining, using laboratory experiments and field experiments, many of them in India. My work spans psychology and economics, applied game theory, and applied microeconomic theory.</p>
-  <p class="lede">I received my Ph.D. in Economics from the University of Arizona in 2006 and taught at the University of Calgary before joining Utah in 2016.</p>
-</section>
+  <main>
 
-<section id="research">
-  <h2>Research</h2>
+  <section class="page" id="page-home">
+    <h1>About me</h1>
+    <p>I am a Professor of Economics at the University of Utah and an affiliated faculty member of the University's Asia Center. I study how people behave in markets, contests, and bargaining, using laboratory experiments and field experiments, many of them in India. My work spans psychology and economics, applied game theory, and applied microeconomic theory.</p>
+    <p>I received my Ph.D. in Economics from the University of Arizona in 2006 and taught at the University of Calgary before joining Utah in 2016.</p>
+  </section>
 
-  <h3>Under review</h3>
-  <ol class="papers">
-    <li><span class="title">Pay Inequity and Peer Dynamics: New Field Evidence on Labor Market Sorting</span>
-      <span class="meta">with Kenju Kamei. Revise and resubmit, <span class="journal">Economic Journal</span>.</span></li>
-    <li><span class="title">Social Status and Efficiency-Equality Trade-off in Resource Allocation: Experimental Evidence from India</span>
-      <span class="meta">with Haimanti Bhattacharya, Joyita Roy Chowdhury, and Yashwant Parida. Under review, <span class="journal">Journal of Behavioral and Experimental Economics</span>.</span></li>
-  </ol>
+  <section class="page" id="page-research">
+    <h1>Research</h1>
 
-  <h3>Work in progress</h3>
-  <ol class="papers">
-    <li><span class="title">Social Distance, Sabotage, Sorting</span>
-      <span class="meta">with Kenju Kamei.</span></li>
-    <li><span class="title">Efficiency in Taking or Giving Games with a Powerless Third Party: Theory and Experiment</span>
-      <span class="meta">with Haimanti Bhattacharya and Sumit Sarkar.</span></li>
-    <li><span class="title">Coordination and Communication in Large Groups</span>
-      <span class="meta">with Quazi Shahriar.</span></li>
-    <li><span class="title">Blame Aversion and Efficiency: An Experiment</span>
-      <span class="meta">with Quazi Shahriar.</span></li>
-  </ol>
+    <h2>Under Review</h2>
+    <div class="paper"><span class="t">Pay Inequity and Peer Dynamics: New Field Evidence on Labor Market Sorting</span><span class="a">with Kenju Kamei</span><span class="j">Revise and resubmit, <em>Economic Journal</em></span></div>
+    <div class="paper"><span class="t">Social Status and Efficiency-Equality Trade-off in Resource Allocation: Experimental Evidence from India</span><span class="a">with Haimanti Bhattacharya, Joyita Roy Chowdhury, and Yashwant Parida</span><span class="j">Under review, <em>Journal of Behavioral and Experimental Economics</em></span></div>
 
-  <h3>Publications</h3>
-  <ol class="papers">
-    <li><span class="title">Whose Behavior Matters? Gender and Responses to Social Information on Honesty and Generosity</span>
-      <span class="meta">with Haimanti Bhattacharya. <span class="journal">Economics Letters</span>, conditionally accepted, 2026.</span></li>
-    <li><span class="title">The Good, the Bad, and the Ugly: The Role of AI Quality Disclosure in Deception Detection</span>
-      <span class="meta">with Haimanti Bhattacharya, Sanchaita Hazra, and Bodhisattwa Majumder. <span class="journal">Journal of Behavioral and Experimental Economics</span>, 2026, 102555.</span></li>
-    <li><span class="title">Bargaining over Taking from a Powerless Third Party: The Role of Social Preferences</span>
-      <span class="meta">with Haimanti Bhattacharya and Sumit Sarkar. <span class="journal">Journal of Behavioral and Experimental Economics</span>, 2025, 119, 102429.</span></li>
-    <li><span class="title">Can Threats Improve Payoffs from Bargaining in Markets with Retaliations? Evidence from a Natural Field Experiment</span>
-      <span class="meta">with Haimanti Bhattacharya. <span class="journal">Games and Economic Behavior</span>, 2024, 148, 119–137.</span></li>
-    <li><span class="title">Lying for Votes</span>
-      <span class="meta">with Quazi Shahriar. <span class="journal">Games and Economic Behavior</span>, 2023, 142, 46–72.</span></li>
-    <li><span class="title">Undervaluation versus Unaffordability as Negotiation Tactics: Evidence from a Field Experiment</span>
-      <span class="meta">with Haimanti Bhattacharya. <span class="journal">Journal of Economic Psychology</span>, 2023, 96 (Special Issue on Bargaining).</span></li>
-    <li><span class="title">Business Norm versus Norm-Nudge as a Contract-Enforcing Mechanism: Evidence from a Real Marketplace</span>
-      <span class="meta">with Haimanti Bhattacharya. <span class="journal">European Economic Review</span>, 2022, 144 (Virtual Special Issue on Nudges and Incentives).</span></li>
-    <li><span class="title">The Hidden Costs of Bargaining: Evidence from a Cheating-Prone Marketplace</span>
-      <span class="meta">with Haimanti Bhattacharya. <span class="journal">International Economic Review</span>, 2020, 61(3), 1253–1280.</span></li>
-    <li><span class="title">Can Concerns for Social Status Mitigate the “Lemons Problem”? Experimental Evidence from the Indian Caste Hierarchy</span>
-      <span class="meta">with Haimanti Bhattacharya. <span class="journal">Journal of South Asian Development</span>, 2019, 14(2), 151–179.</span></li>
-    <li><span class="title">Deception: The Role of Uncertain Consequences</span>
-      <span class="meta">with Quazi Shahriar and Arnab Mitra. <span class="journal">European Economic Review</span>, 2019, 114, 1–18.</span></li>
-    <li><span class="title">Restricted and Free-Form Cheap-Talk and the Scope for Efficient Coordination</span>
-      <span class="meta">with Quazi Shahriar. <span class="journal">Games and Economic Behavior</span>, 2018, 109, 294–310.</span></li>
-    <li><span class="title">Fishy Behavior: A Field Experiment on (Dis)honesty in the Marketplace</span>
-      <span class="meta">with Haimanti Bhattacharya. <span class="journal">Journal of Behavioral and Experimental Economics</span>, 2017, 67, 41–55.</span></li>
-    <li><span class="title">Bertrand Competition with Asymmetric Marginal Costs</span>
-      <span class="meta">with Arnab Mitra. <span class="journal">Economic Inquiry</span>, 2016, 54(3), 1631–1647.</span></li>
-    <li><span class="title">Intrinsic Motivation, External Reward, and Their Effect on Overall Task Motivation and Performance</span>
-      <span class="meta">with Rosa Hendijani, Diane P. Bischak, and Joseph Arvai. <span class="journal">Human Performance</span>, 2016, 29(4), 251–274.</span></li>
-    <li><span class="title">Partnership Formation: The Role of Social Status</span>
-      <span class="meta">with Haimanti Bhattacharya. <span class="journal">Management Science</span>, 2014, 60(5), 1130–1147.</span></li>
-    <li><span class="title">Contest for Ranks</span>
-      <span class="meta">with Haimanti Bhattacharya. <span class="journal">Southern Economic Journal</span>, 2013, 79(3), 621–638.</span></li>
-    <li><span class="title">Status Incentives and Performance</span>
-      <span class="meta">with Haimanti Bhattacharya. <span class="journal">Managerial and Decision Economics</span>, 2012, 33(7–8), 549–563.</span></li>
-    <li><span class="title">Group Identity and the Moral Hazard Problem: Experimental Evidence</span>
-      <span class="meta">with Quazi Shahriar. <span class="journal">Journal of Economics and Management Strategy</span>, 2012, 21(4), 1061–1081.</span></li>
-    <li><span class="title">Can’t Buy Me Love? A Field Experiment Exploring the Trade-off Between Income and Caste-Status in an Indian Matrimonial Market</span>
-      <span class="meta">with Haimanti Bhattacharya and David Reiley. <span class="journal">Economic Inquiry</span>, 2012, 50(2), 534–550.</span></li>
-    <li><span class="title">Focal Points and Economic Efficiency: The Role of Relative Label Salience</span>
-      <span class="meta">with Quazi Shahriar. <span class="journal">Southern Economic Journal</span>, 2012, 78(3), 954.</span></li>
-    <li><span class="title">Non-monetary Incentives and Opportunistic Behavior: Evidence from a Laboratory Public Good Game</span>
-      <span class="meta"><span class="journal">Economic Inquiry</span>, 2012, 51(2), 1374–1388.</span></li>
-    <li><span class="title">Non-monetary Sanction and Behavior in an Experimental Coordination Game</span>
-      <span class="meta"><span class="journal">Journal of Economic Behavior &amp; Organization</span>, 2010, 73(3), 377–386.</span></li>
-    <li><span class="title">Choice of Routes in Congested Traffic Networks: Experimental Tests of the Braess Paradox</span>
-      <span class="meta">with Amnon Rapoport, Tamar Kugler, and Eyran Gisches. <span class="journal">Games and Economic Behavior</span>, 2009, 65(2), 538–571.</span></li>
-    <li><span class="title">Braess Paradox in the Laboratory: An Experimental Study of Route Choice in Traffic Networks with Asymmetric Costs</span>
-      <span class="meta">with Amnon Rapoport, Tamar Kugler, and Eyran Gisches. In <span class="journal">Decision Modeling and Behavior in Complex and Uncertain Environments</span>, Springer, 2008, 309–337.</span></li>
-    <li><span class="title">Price-Matching Guarantees and Equilibrium Selection in a Homogeneous Product Market: An Experimental Study</span>
-      <span class="meta"><span class="journal">Review of Industrial Organization</span>, 2007, 30(2), 107–119.</span></li>
-    <li><span class="title">Hassle Costs, Price-Matching Guarantees, and Competition</span>
-      <span class="meta">with Todd Sorensen. <span class="journal">Review of Industrial Organization</span>, 2006, 28(4), 359–378.</span></li>
-  </ol>
-</section>
+    <h2>Work in Progress</h2>
+    <div class="paper"><span class="t">Social Distance, Sabotage, Sorting</span><span class="a">with Kenju Kamei</span></div>
+    <div class="paper"><span class="t">Efficiency in Taking or Giving Games with a Powerless Third Party: Theory and Experiment</span><span class="a">with Haimanti Bhattacharya and Sumit Sarkar</span></div>
+    <div class="paper"><span class="t">Coordination and Communication in Large Groups</span><span class="a">with Quazi Shahriar</span></div>
+    <div class="paper"><span class="t">Blame Aversion and Efficiency: An Experiment</span><span class="a">with Quazi Shahriar</span></div>
 
-<section id="teaching">
-  <h2>Teaching</h2>
-  <h3>Graduate</h3>
-  <ul class="courses">
-    <li>Microeconomic Theory II (Ph.D. and M.A.)</li>
-    <li>Behavioral Economics (Ph.D. and M.A.)</li>
-    <li>Experimental Economics (Ph.D. and M.A.)</li>
-    <li>Microeconomic Theory for Masters (M.A.)</li>
-    <li>Advanced Readings in Experimental Economics (Ph.D., Calgary)</li>
-  </ul>
-  <h3>Undergraduate</h3>
-  <ul class="courses">
-    <li>Behavioral Economics</li>
-    <li>Game Theory</li>
-    <li>Intermediate Microeconomics, for economics majors and for business majors</li>
-    <li>Experimental Economics (Calgary)</li>
-    <li>Intermediate Industrial Organization (Arizona)</li>
-  </ul>
-</section>
+    <h2>Publications</h2>
+    <div class="paper"><span class="t">Whose Behavior Matters? Gender and Responses to Social Information on Honesty and Generosity</span><span class="a">with Haimanti Bhattacharya</span><span class="j"><em>Economics Letters</em>, conditionally accepted (2026)</span></div>
+    <div class="paper"><span class="t">The Good, the Bad, and the Ugly: The Role of AI Quality Disclosure in Deception Detection</span><span class="a">with Haimanti Bhattacharya, Sanchaita Hazra, and Bodhisattwa Majumder</span><span class="j"><em>Journal of Behavioral and Experimental Economics</em>, 102555 (2026)</span></div>
+    <div class="paper"><span class="t">Bargaining over Taking from a Powerless Third Party: The Role of Social Preferences</span><span class="a">with Haimanti Bhattacharya and Sumit Sarkar</span><span class="j"><em>Journal of Behavioral and Experimental Economics</em>, 119, 102429 (2025)</span></div>
+    <div class="paper"><span class="t">Can Threats Improve Payoffs from Bargaining in Markets with Retaliations? Evidence from a Natural Field Experiment</span><span class="a">with Haimanti Bhattacharya</span><span class="j"><em>Games and Economic Behavior</em>, 148, 119–137 (2024)</span></div>
+    <div class="paper"><span class="t">Lying for Votes</span><span class="a">with Quazi Shahriar</span><span class="j"><em>Games and Economic Behavior</em>, 142, 46–72 (2023)</span></div>
+    <div class="paper"><span class="t">Undervaluation versus Unaffordability as Negotiation Tactics: Evidence from a Field Experiment</span><span class="a">with Haimanti Bhattacharya</span><span class="j"><em>Journal of Economic Psychology</em>, 96, Special Issue on Bargaining (2023)</span></div>
+    <div class="paper"><span class="t">Business Norm versus Norm-Nudge as a Contract-Enforcing Mechanism: Evidence from a Real Marketplace</span><span class="a">with Haimanti Bhattacharya</span><span class="j"><em>European Economic Review</em>, 144, Virtual Special Issue on Nudges and Incentives (2022)</span></div>
+    <div class="paper"><span class="t">The Hidden Costs of Bargaining: Evidence from a Cheating-Prone Marketplace</span><span class="a">with Haimanti Bhattacharya</span><span class="j"><em>International Economic Review</em>, 61(3), 1253–1280 (2020)</span></div>
+    <div class="paper"><span class="t">Can Concerns for Social Status Mitigate the “Lemons Problem”? Experimental Evidence from the Indian Caste Hierarchy</span><span class="a">with Haimanti Bhattacharya</span><span class="j"><em>Journal of South Asian Development</em>, 14(2), 151–179 (2019)</span></div>
+    <div class="paper"><span class="t">Deception: The Role of Uncertain Consequences</span><span class="a">with Quazi Shahriar and Arnab Mitra</span><span class="j"><em>European Economic Review</em>, 114, 1–18 (2019)</span></div>
+    <div class="paper"><span class="t">Restricted and Free-Form Cheap-Talk and the Scope for Efficient Coordination</span><span class="a">with Quazi Shahriar</span><span class="j"><em>Games and Economic Behavior</em>, 109, 294–310 (2018)</span></div>
+    <div class="paper"><span class="t">Fishy Behavior: A Field Experiment on (Dis)honesty in the Marketplace</span><span class="a">with Haimanti Bhattacharya</span><span class="j"><em>Journal of Behavioral and Experimental Economics</em>, 67, 41–55 (2017)</span></div>
+    <div class="paper"><span class="t">Bertrand Competition with Asymmetric Marginal Costs</span><span class="a">with Arnab Mitra</span><span class="j"><em>Economic Inquiry</em>, 54(3), 1631–1647 (2016)</span></div>
+    <div class="paper"><span class="t">Intrinsic Motivation, External Reward, and Their Effect on Overall Task Motivation and Performance</span><span class="a">with Rosa Hendijani, Diane P. Bischak, and Joseph Arvai</span><span class="j"><em>Human Performance</em>, 29(4), 251–274 (2016)</span></div>
+    <div class="paper"><span class="t">Partnership Formation: The Role of Social Status</span><span class="a">with Haimanti Bhattacharya</span><span class="j"><em>Management Science</em>, 60(5), 1130–1147 (2014)</span></div>
+    <div class="paper"><span class="t">Contest for Ranks</span><span class="a">with Haimanti Bhattacharya</span><span class="j"><em>Southern Economic Journal</em>, 79(3), 621–638 (2013)</span></div>
+    <div class="paper"><span class="t">Status Incentives and Performance</span><span class="a">with Haimanti Bhattacharya</span><span class="j"><em>Managerial and Decision Economics</em>, 33(7–8), 549–563 (2012)</span></div>
+    <div class="paper"><span class="t">Group Identity and the Moral Hazard Problem: Experimental Evidence</span><span class="a">with Quazi Shahriar</span><span class="j"><em>Journal of Economics and Management Strategy</em>, 21(4), 1061–1081 (2012)</span></div>
+    <div class="paper"><span class="t">Can’t Buy Me Love? A Field Experiment Exploring the Trade-off Between Income and Caste-Status in an Indian Matrimonial Market</span><span class="a">with Haimanti Bhattacharya and David Reiley</span><span class="j"><em>Economic Inquiry</em>, 50(2), 534–550 (2012)</span></div>
+    <div class="paper"><span class="t">Focal Points and Economic Efficiency: The Role of Relative Label Salience</span><span class="a">with Quazi Shahriar</span><span class="j"><em>Southern Economic Journal</em>, 78(3), 954 (2012)</span></div>
+    <div class="paper"><span class="t">Non-monetary Incentives and Opportunistic Behavior: Evidence from a Laboratory Public Good Game</span><span class="j"><em>Economic Inquiry</em>, 51(2), 1374–1388 (2012)</span></div>
+    <div class="paper"><span class="t">Non-monetary Sanction and Behavior in an Experimental Coordination Game</span><span class="j"><em>Journal of Economic Behavior &amp; Organization</em>, 73(3), 377–386 (2010)</span></div>
+    <div class="paper"><span class="t">Choice of Routes in Congested Traffic Networks: Experimental Tests of the Braess Paradox</span><span class="a">with Amnon Rapoport, Tamar Kugler, and Eyran Gisches</span><span class="j"><em>Games and Economic Behavior</em>, 65(2), 538–571 (2009)</span></div>
+    <div class="paper"><span class="t">Braess Paradox in the Laboratory: An Experimental Study of Route Choice in Traffic Networks with Asymmetric Costs</span><span class="a">with Amnon Rapoport, Tamar Kugler, and Eyran Gisches</span><span class="j">In <em>Decision Modeling and Behavior in Complex and Uncertain Environments</em>, Springer, 309–337 (2008)</span></div>
+    <div class="paper"><span class="t">Price-Matching Guarantees and Equilibrium Selection in a Homogeneous Product Market: An Experimental Study</span><span class="j"><em>Review of Industrial Organization</em>, 30(2), 107–119 (2007)</span></div>
+    <div class="paper"><span class="t">Hassle Costs, Price-Matching Guarantees, and Competition</span><span class="a">with Todd Sorensen</span><span class="j"><em>Review of Industrial Organization</em>, 28(4), 359–378 (2006)</span></div>
+  </section>
 
-<footer>Updated October 2026</footer>
+  <section class="page" id="page-teaching">
+    <h1>Teaching</h1>
+    <h2>Graduate</h2>
+    <ul class="list">
+      <li>Microeconomic Theory II (Ph.D. and M.A.)</li>
+      <li>Behavioral Economics (Ph.D. and M.A.)</li>
+      <li>Experimental Economics (Ph.D. and M.A.)</li>
+      <li>Microeconomic Theory for Masters (M.A.)</li>
+      <li>Advanced Readings in Experimental Economics (Ph.D., Calgary)</li>
+    </ul>
+    <h2>Undergraduate</h2>
+    <ul class="list">
+      <li>Behavioral Economics</li>
+      <li>Game Theory</li>
+      <li>Intermediate Microeconomics, for economics majors and for business majors</li>
+      <li>Experimental Economics (Calgary)</li>
+      <li>Intermediate Industrial Organization (Arizona)</li>
+    </ul>
+  </section>
 
-</main>
+  </main>
 </div>
+
+<footer><div>© 2026 Subhasish Dugar</div></footer>
+
+<script>
+function show(){
+  var p=(location.hash||'#home').slice(1);
+  if(!document.getElementById('page-'+p)) p='home';
+  document.querySelectorAll('.page').forEach(function(s){s.classList.toggle('show',s.id==='page-'+p);});
+  document.querySelectorAll('.masthead a[data-page]').forEach(function(a){a.classList.toggle('active',a.dataset.page===p && p!=='home');});
+  window.scrollTo(0,0);
+}
+window.addEventListener('hashchange',show);
+show();
+</script>
 </body>
 </html>
