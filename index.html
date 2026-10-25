@@ -155,7 +155,6 @@ footer div{max-width:1280px;margin:0 auto;padding:1.5em}
       <li>XLRI, Jamshedpur</li>
       <li>Jawaharlal Nehru University</li>
       <li>Central European University</li>
-      <li>Centre for Development Studies, Thiruvananthapuram, India</li>
     </ul>
     <h2>Graduate</h2>
     <ul class="list">
@@ -188,8 +187,14 @@ function show(){
   document.querySelectorAll('.masthead a[data-page]').forEach(function(a){a.classList.toggle('active',a.dataset.page===p && p!=='home');});
   window.scrollTo(0,0);
 }
-window.addEventListener('hashchange',show);
+window.addEventListener('hashchange',function(){
+  show();
+  if(window.goatcounter && window.goatcounter.count){
+    window.goatcounter.count({path: '/' + (location.hash || '#home')});
+  }
+});
 show();
 </script>
+<script data-goatcounter="https://subhdugar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
